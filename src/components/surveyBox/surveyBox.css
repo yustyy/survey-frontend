@@ -1,0 +1,44 @@
+.survey {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(0deg,#1da8b7a5,#2a719d69);
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    overflow: hidden;
+    justify-content: flex-start;
+    margin: 1rem;
+    
+}
+
+.survey-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.survey-get-link-button button {
+    background-color: #3faed9;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.survey-view-button button{
+    background-color: #3faed9;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}

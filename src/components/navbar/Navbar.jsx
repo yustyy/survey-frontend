@@ -7,7 +7,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const openSurveysPage = () => {
-    navigate(`/surveys/`);
+    navigate(`/admin/surveys/`);
+  };
+
+  const logout = () => {
+    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+
+    navigate('/login');
   };
 
   return (
@@ -17,7 +23,10 @@ const Navbar = () => {
 
          <div className='navbar-items-logo'>
             <img src={logo} alt='logo' />
+            <h2>Admin Paneli</h2>
         </div>
+
+        
 
         <div className='navbar-items-container'>
         <p><a onClick={openSurveysPage}>Anketler</a></p>
@@ -26,7 +35,7 @@ const Navbar = () => {
     </div>
 
     <div className='navbar-login'>
-      <button type='button'>Çıkış Yap</button>
+      <button type='button' onClick={logout}>Çıkış Yap</button>
      </div>
 
        

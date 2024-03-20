@@ -36,9 +36,6 @@ const SurveyDetails = () => {
     navigate(`/surveys/`);
   };
 
- 
-
-
 
 
   useEffect(() => {
@@ -51,13 +48,17 @@ const SurveyDetails = () => {
   return (
     <div className='survey-details'>
       <button className="go-back-button" onClick={goBack}>Geri</button>
+      
       <div className='survey-details-container'>
+
         <div className='survey-details-name'>
           <h3>Anket adı: {survey.name}</h3>
         </div>
+
         <div className='survey-details-question-count'>
           <h3>Soru Sayısı: {survey.questions?.length}</h3>
         </div>
+
         <div className='survey-details-view-button'>
           <button type='button' onClick={openNameModal}>Anket adını değiştir</button>
           <button className="add-question-button" onClick={handleOpenAddQuestionModal}>Soru Ekle</button>

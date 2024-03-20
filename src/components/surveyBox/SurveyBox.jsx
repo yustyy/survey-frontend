@@ -1,12 +1,16 @@
 import React from 'react'
 import './surveyBox.css'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import DeleteSurveyModal from '../../pages/deleteSurveyModal/DeleteSurveyModal'
+
 
 const SurveyBox = ({ survey}) => {
   const navigate = useNavigate();
 
+  const [isDeleteSurveyModalOpen, setIsDeleteQuestionModalOpen] = useState(false);
+
   const handeSurveyDetailsClick = () => {
-    
     navigate(`/surveys/${survey.surveyLink}`); 
   }
 
@@ -14,6 +18,17 @@ const SurveyBox = ({ survey}) => {
     navigator.clipboard.writeText(`http://localhost:3000/solveSurvey/${survey.surveyLink}`)
     alert('Anket linki kopyalandı')
   }
+
+
+  const handleOpenDeleteSurveyModal = () => {
+    setIsDeleteQuestionModalOpen(true);
+  }
+
+  const handleCloseDeleteSurveyModal = () => {
+    setIsDeleteQuestionModalOpen(false);
+  }
+
+ 
 
   return (
     <div className='survey'>
@@ -38,8 +53,14 @@ const SurveyBox = ({ survey}) => {
             <button type='button' onClick={handleGetSurveyLink}>Anket Linkini Kopyala</button>
         </div>
 
+        <div className='survey-delete-button'>
+            <button type='button' onClick={handleOpenDeleteSurveyModal}>Anketi Sil</button>
+        </div>
+
       </div>
-       
+
+      {isDeleteSurveyModalOpen && <DeleteSurveyModal survey={survey} closeModal={handleCloseDeleteSurveyModal} />}
+
 
     
 

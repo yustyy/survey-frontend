@@ -19,6 +19,20 @@
     height: 40px;
 }
 
+.navbar-items-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-items-logo h2 {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
 .navbar-items-container {
   display: flex;
   flex-direction: row;

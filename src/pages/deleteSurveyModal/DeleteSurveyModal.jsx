@@ -1,40 +1,38 @@
 import React from 'react'
-import './deleteQuestionModel.css'
-import QuestionService from '../../services/QuestionService';
+import './deleteSurveyModal.css'
+import SurveyService from '../../services/SurveyService';
 
-const DeleteQuestionModel = ( {question, closeModal}) => {
+const DeleteSurveyModal = ({survey, handleCloseDeleteSurveyModal}) => {
 
-
-
-  const questionService = new QuestionService();
+  const surveyService = new SurveyService();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     try {
-      const response = await questionService.deleteQuestion(question.id);
+      const response = await surveyService.deleteSurvey(survey.id);
       window.location.reload();
       console.error(response.message);
     } catch (error) {
       console.error(error.message);
     }
-  }
-  
+  };
 
 
   return (
-    <div className="modal-overlay">
+  <div className="modal-overlay">
     <div className="modal-content">
-      <h2>Soruyu silmek istediğinizden emin misiniz?</h2>
-      <p>Soru: {question.content}</p>
-      <p>Sorunun cevaplanma sayısı: {question.ratings.length}</p>
+      <h2>Anketi silmek istediğinize emin misiniz?</h2>
+      <p>Anket: {survey.name}</p>
+      <p>Soru sayısı {survey.questions.length} </p>
       <p>Bu işlem geri alınamaz!</p>
       <form>
         <div className="buttons">
           <button
             type="submit"
             className="button-cancel"
-            onClick={closeModal}
+            onClick={handleCloseDeleteSurveyModal}
           >
             İptal et
           </button>
@@ -43,7 +41,7 @@ const DeleteQuestionModel = ( {question, closeModal}) => {
             className="button-submit"
             onClick={handleSubmit}
           >
-            Soruyu Sil
+            Anketi Sil
           </button>
         </div>
       </form>
@@ -52,4 +50,4 @@ const DeleteQuestionModel = ( {question, closeModal}) => {
   )
 }
 
-export default DeleteQuestionModel
+export default DeleteSurveyModal

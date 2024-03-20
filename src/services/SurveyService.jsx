@@ -19,4 +19,12 @@ export default class SurveyService {
     addSurvey(surveyName){
         return axios.post(this.APILink+"add", {name:surveyName})
     }
+
+    deleteSurvey(surveyId){
+        return axios.post(this.APILink+"delete?id="+surveyId)
+    }
+
+    getSurveyQuestionsByLink(surveyLink){
+        return axios.get(this.APILink+"getSurveyQuestionsByLink?surveyLink="+surveyLink)
+    }
 }

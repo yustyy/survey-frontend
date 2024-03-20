@@ -11,4 +11,9 @@ export default class RatingService {
     deleteQuestion(questionId){
         return axios.post(this.APILink+"delete?id="+questionId)
     }
+
+    changeQuestion(questionId, newContent){
+        return axios.post(this.APILink+"changeQuestionName?questionId="+questionId+"&newName="+newContent)
+    }
+
 }

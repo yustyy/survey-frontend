@@ -13,12 +13,18 @@
 
 .survey-buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+
 }
+
+.survey-name h3 {
+    background-color: #3faed9;
+}
+
+
+
 
 
 .survey-get-link-button button {
@@ -42,3 +48,20 @@
     outline: none;
     border: none;
 }
+
+
+.survey-delete-button button{
+     background-color: #ff0000da;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.survey-delete-button button:hover{
+    background-color: #ff0000;
+}
+

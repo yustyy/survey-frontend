@@ -7,4 +7,14 @@ export default class RatingService {
     getAverageRatingByQuestionId(questionId){
         return axios.get(this.APILink+"getAverageRatingByQuestionId?questionId="+questionId)
     }
+
+    addRatingList(ratings){
+        return axios.post(this.APILink+"addRatingList",ratings)
+    }
+
+    getRatingsByQuestionId(questionId){
+        return axios.get(this.APILink+"getRatingsByQuestionId?questionId="+questionId)
+    }
+
+
 }

@@ -24,13 +24,14 @@
   
   .question-detail-buttons {
     margin-top: 20px;
+    margin-left: auto;
   }
   
   .question-detail-buttons button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 6px;
     margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;

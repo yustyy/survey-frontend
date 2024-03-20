@@ -1,75 +1,78 @@
-/* surveyDetails.css */
-
+/* Eski CSS Kodları */
 .survey-details {
-    padding: 20px;
-  }
-  
+  padding: 20px;
+}
+
+.survey-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.survey-details-name h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.survey-details-question-count h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.survey-details-view-button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.survey-details-view-button button:hover {
+  background-color: #0056b3;
+}
+
+.questions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.go-back-button,
+.add-question-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+}
+
+.go-back-button:hover,
+.add-question-button:hover {
+  background-color: #0056b3;
+}
+
+/* Yeni CSS Kodları (Mobil Uyumlu) */
+@media screen and (max-width: 768px) {
   .survey-details-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin: auto;
-  }
-  
-  .survey-details-name h3 {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .survey-details-question-count h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .survey-details-view-button button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .survey-details-view-button button:hover {
-    background-color: #0056b3;
-  }
-  
-  .questions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  .go-back-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .add-question-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
-    margin-left: 3rem;
+  .survey-details-view-button button {
+    margin-top: 10px;
   }
-  
-  
-  .go-back-button:hover {
-    background-color: #0056b3;
+
+  .questions {
+    grid-template-columns: repeat(1, 1fr); /* Mobil cihazlarda tek sütunlu */
   }
-  
+}

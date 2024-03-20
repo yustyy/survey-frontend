@@ -60,8 +60,8 @@ const SurveyDetails = () => {
         </div>
 
         <div className='survey-details-view-button'>
-          <button type='button' onClick={openNameModal}>Anket adını değiştir</button>
-          <button className="add-question-button" onClick={handleOpenAddQuestionModal}>Soru Ekle</button>
+          <button type='button' className='change-survey-name-button' onClick={openNameModal}>Anket adını değiştir</button>
+          <button type='button' className="add-question-button" onClick={handleOpenAddQuestionModal}>Soru Ekle</button>
         </div>
       </div>
 

@@ -25,6 +25,7 @@ const App = () => {
   return (
       <div className="App"> 
       {renderNavbar()}
+      
         <Routes> 
           <Route path="*" element={token ? <Navigate to="/surveys" /> : <Navigate to="/login" />} /> 
           <Route path="/surveys" element={token ? <Surveys /> : <Navigate to="/login" />}   />

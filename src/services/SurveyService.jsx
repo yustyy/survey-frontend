@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default class SurveyService {
 
-    APILink = "http://localhost:8080/api/surveys/"
+    APILink = "https://devrim-backend.onrender.com/api/surveys/"
 
     getSurveys(){
         return axios.get(this.APILink+"getAllSurveys")

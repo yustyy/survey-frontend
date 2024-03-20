@@ -12,7 +12,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/generateToken', null, {
+      const response = await axios.post('https://devrim-backend.onrender.com/api/auth/generateToken', null, {
         params: {
           username: username,
           password: password
@@ -21,7 +21,7 @@ const LoginPage = () => {
       
       const token = response.data.data;
       console.log('Token:', token);
-      document.cookie = `token=${token}; path=/; SameSite=None;`;
+      document.cookie = `token=${token}; path=/; secure; samesite=None;`;
       navigate('/surveys'); // Redirect to the admin panel
     } catch (error) {
       console.error('Error logging in:', error);

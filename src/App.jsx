@@ -1,5 +1,5 @@
 import React from 'react'
-import './app.css'
+import './App.css'
 import { Navbar } from './components'
 import Surveys from './pages/surveys/Surveys'
 import SurveyDetails from './pages/surveyDetails/SurveyDetails'

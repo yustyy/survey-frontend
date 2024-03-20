@@ -127,3 +127,51 @@ body {
 }
 
 
+/* Mobil Uyumlu CSS */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px; /* Küçük ekranlarda daha az dolgulu bir konteyner */
+  }
+  
+  h1 {
+    font-size: 20px; /* Başlık font boyutunu azalt */
+    margin-bottom: 10px; /* Başlık ile diğer içerikler arasındaki boşluğu azalt */
+  }
+  
+  .card {
+    border-radius: 4px; /* Kartların köşe yuvarlaklığını azalt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
+  }
+  
+  .card-body {
+    padding: 15px; /* Kart içeriği için daha az dolgu */
+  }
+  
+  .question-text {
+    font-size: 16px; /* Soru metni font boyutunu azalt */
+    margin-bottom: 8px; /* Soru metni ile yıldızlar arasındaki boşluğu azalt */
+  }
+  
+  .star {
+    font-size: 24px; /* Yıldız boyutunu artır */
+    margin: 0 3px; /* Yıldızlar arasındaki boşluğu azalt */
+  }
+  
+  .container img {
+    width: 300px; /* Logonun genişliğini azalt */
+    margin-bottom: 10px; /* Logo ile diğer içerikler arasındaki boşluğu azalt */
+  }
+  
+  .survey-name {
+    font-size: 20px; /* Anket adı font boyutunu azalt */
+    margin-bottom: 15px; /* Anket adı ile diğer içerikler arasındaki boşluğu azalt */
+  }
+  
+  .submit-button {
+    margin: 15px auto; /* Gönderme düğmesi ile diğer içerikler arasındaki boşluğu ayarla */
+    padding: 8px 16px; /* Gönderme düğmesi dolgusunu ayarla */
+    font-size: 14px; /* Gönderme düğmesi font boyutunu azalt */
+  }
+}
+
+

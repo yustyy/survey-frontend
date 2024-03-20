@@ -15,7 +15,7 @@ const SurveyBox = ({ survey}) => {
   }
 
   const handleGetSurveyLink = () => {
-    navigator.clipboard.writeText(`http://localhost:3000/solveSurvey/${survey.surveyLink}`)
+    navigator.clipboard.writeText(`hhttps://survey-frontend-opal.vercel.app//solveSurvey/${survey.surveyLink}`)
     alert('Anket linki kopyalandı')
   }
 

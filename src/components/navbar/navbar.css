@@ -1,9 +1,9 @@
+/* Eski CSS Kodları */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #00496a;
-
     padding: 1rem 4rem;
 }
 
@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 
-.navbar-items-logo img{
+.navbar-items-logo img {
     height: 40px;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .navbar-items-container {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar-items-container a {
@@ -52,4 +52,33 @@
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Yeni CSS Kodları (Mobil Uyumlu) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar-items {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .navbar-login {
+        margin-top: 1rem;
+    }
+
+    .navbar-items-logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-items-container {
+        flex-wrap: wrap;
+    }
+
+    .navbar-items-container a {
+        margin: 5px;
+    }
 }

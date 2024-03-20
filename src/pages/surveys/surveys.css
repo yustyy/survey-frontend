@@ -1,21 +1,33 @@
+/* Eski CSS Kodları */
 .survey-container {
   margin: 20px;
 }
 
 .surveys {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Otomatik olarak sütunları doldur */
+  grid-template-columns: repeat(3, 1fr); /* Her satırda 3 nesne */
   gap: 20px; /* Nesneler arasındaki boşluk */
 }
 
+.surveys button,
 .add-new-survey-button {
   margin-bottom: 10px; /* Anket ekleme butonunun alt boşluğu */
   padding: 10px 20px;
   font-size: 16px;
   background-color: #007bff;
-  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%; /* Düğme genişliğini ayarla */
+}
+
+.surveys button:hover,
+.add-new-survey-button:hover {
+  background-color: #0056b3;
+}
+
+/* Yeni CSS Kodları (Mobil Uyumlu) */
+@media screen and (max-width: 768px) {
+  .surveys {
+      grid-template-columns: repeat(1, 1fr); /* Mobil cihazlarda tek sütunlu */
+  }
 }

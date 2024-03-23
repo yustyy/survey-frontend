@@ -92,7 +92,7 @@ const SolveSurvey = () => {
       </div>
       
       <button className="point-submit-button" onClick={handleSubmit} disabled={isSubmitting}>
-        {isSubmitting ? 'Submitting...' : 'Submit Ratingsa'}
+        {isSubmitting ? 'Submitting...' : 'Submit Ratings'}
       </button>
     </div>
     

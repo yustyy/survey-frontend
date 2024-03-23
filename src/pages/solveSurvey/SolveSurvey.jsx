@@ -68,6 +68,7 @@ const SolveSurvey = () => {
         </div>
       
       <h1 className='point-survey-name'>{survey.surveyName}</h1>
+      <div className='solve-card-container'>
       {survey.questions.map(question => (
         <div key={question.id} className="point-card">
           <div className="point-card-body">
@@ -88,8 +89,10 @@ const SolveSurvey = () => {
           </div>
         </div>
       ))}
+      </div>
+      
       <button className="point-submit-button" onClick={handleSubmit} disabled={isSubmitting}>
-        {isSubmitting ? 'Submitting...' : 'Submit Ratings'}
+        {isSubmitting ? 'Submitting...' : 'Submit Ratingsa'}
       </button>
     </div>
     

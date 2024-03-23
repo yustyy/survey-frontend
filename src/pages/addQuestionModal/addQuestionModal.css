@@ -1,0 +1,38 @@
+.addq-button-cancel{
+    background-color: var(--button_color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+    transition: 100ms background-color;
+}
+
+.addq-button-submit{
+    background-color: var(--palette_main);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+  transition: 100ms background-color;
+}
+
+.addq-button-cancel:hover{
+    background-color: var(--button_hover);
+}
+
+.addq-button-submit:hover{
+    background-color: var(--palette_secondary);
+}
+
+.addq-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}

@@ -32,11 +32,11 @@ const SurveyBox = ({ survey}) => {
 
   return (
     <div className='survey'>
-     <div className='survey-container'>
-        <div className='survey-name'>
+     <div className='survey-comp-container'>
+        <div className='surveys-survey-name'>
             <h3>Anket adı: {survey.name}</h3>
         </div>
-        <div className='survey-question-count'>
+        <div className='surveys-survey-question-count'>
             <h3>Soru sayısı: {survey.questions.length}</h3>
         </div>
 

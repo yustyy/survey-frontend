@@ -1,13 +1,12 @@
-.question-detail {
-    background-color: #f4f4f4;
+.question-detail-cover {
+    background-color: var(--detail_background);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
+    border-radius: 15px;
+   
     margin: 1.5rem 3rem;
   }
   
-  .question-name {
+  .question-detail-name {
     margin-bottom: 10px;
   }
   
@@ -28,17 +27,25 @@
   }
   
   .question-detail-buttons button {
-    background-color: #007bff;
+    background-color: var(--palette_main);
     color: #fff;
     border: none;
-    padding: 10px 6px;
+    padding: 10px 10px;
     margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
   }
   
   .question-detail-buttons button:hover {
-    background-color: #0056b3;
+    background-color: var(--palette_secondary);
   }
   
+
+  @media only screen and (max-width:768px){
+    .question-detail-buttons{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

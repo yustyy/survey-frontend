@@ -34,7 +34,7 @@ const NameModal = ({ closeNameModal, surveyId }) => {
             value={newName}
             onChange={handleChange}
           />
-          <div className="buttons">
+          <div className="change-name-buttons">
             <button
               type="button"
               className="button-cancel"

@@ -24,12 +24,12 @@
     margin-bottom: 10px;
   }
   
-  .buttons {
+  .deleteq-buttons {
     margin-top: 20px;
   }
   
-  .button-cancel,
-  .button-submit {
+  .deleteq-button-cancel,
+  .deleteq-button-submit {
     padding: 10px 20px;
     margin-right: 10px;
     border: none;
@@ -37,16 +37,22 @@
     cursor: pointer;
   }
   
-  .button-cancel {
-    background-color: #ccc;
-  }
-  
-  .button-submit {
-    background-color: #f44336;
+  .deleteq-button-cancel {
+    background-color: var(--button_color);
     color: #fff;
   }
+
+  .deleteq-button-cancel:hover{
+    background-color: var(--button_hover);
+  }
   
-  .button-submit:hover {
-    background-color: #d32f2f;
+  .deleteq-button-submit {
+    background-color: var(--palette_main);
+    color: #fff;
+    transition: 100ms background-color;
+  }
+  
+  .deleteq-button-submit:hover {
+    background-color: var(--palette_secondary);
   }
   

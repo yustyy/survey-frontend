@@ -1,5 +1,7 @@
 /* Eski CSS Kodları */
 .survey-container {
+  display: flex;
+  flex-direction: column;
   margin: 20px;
 }
 
@@ -9,21 +11,28 @@
   gap: 20px; /* Nesneler arasındaki boşluk */
 }
 
-.surveys button,
+
 .add-new-survey-button {
+  margin: auto;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px; /* Anket ekleme butonunun alt boşluğu */
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: var(--palette_main);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: var(--background_color);
+  transition: 100ms background-color;
 }
 
-.surveys button:hover,
+
 .add-new-survey-button:hover {
-  background-color: #0056b3;
+  background-color: var(--palette_secondary);
 }
 
 /* Yeni CSS Kodları (Mobil Uyumlu) */

@@ -28,7 +28,7 @@
 .survey-details-view-button button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: var(--palette_main);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -39,7 +39,7 @@
 }
 
 .survey-details-view-button button:hover {
-  background-color: #0056b3;
+  background-color: var(--palette_secondary);
 }
 
 .questions {
@@ -51,7 +51,7 @@
 .go-back-button,
 .add-question-button
 .change-survey-name-button {
-  background-color: #007bff;
+  background-color: var(--palette_main);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -59,11 +59,12 @@
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+  transition: 100ms background-color;
 }
 
 .go-back-button:hover,
 .add-question-button:hover {
-  background-color: #0056b3;
+  background-color: var(--palette_secondary);
 }
 
 /* Yeni CSS Kodları (Mobil Uyumlu) */

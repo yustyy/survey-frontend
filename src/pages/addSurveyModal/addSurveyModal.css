@@ -1,0 +1,38 @@
+.add-survey-button-submit{
+    background-color: var(--palette_main);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+  transition: 100ms background-color;
+}
+
+.add-survey-button-submit:hover{
+    background-color: var(--palette_secondary);
+}
+
+.add-survey-button-cancel{
+    background-color: var(--button_color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Butonun altında bir boşluk bırakmak için */
+  transition: 100ms background-color;
+}
+
+.add-survey-button-cancel:hover{
+    background-color: var(--button_hover);
+}
+
+.add-survey-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}

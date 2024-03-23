@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00496a;
+    background-color: var(--login_background);
     padding: 1rem 4rem;
 }
 
@@ -16,69 +16,127 @@
 }
 
 .navbar-items-logo img {
-    height: 40px;
+    height: 2.5rem;
 }
 
 .navbar-items-logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 20px;
 }
 
-.navbar-items-logo h2 {
+.navbar-items h2 {
+    justify-content: center ;
     color: #fff;
-    margin-left: 10px;
     font-size: 1.5rem;
     font-weight: 500;
-    margin-top: 10px;
+    margin: 0;
+    margin-left: 45.45px;
+}
+
+.navbar-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-items-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .navbar-items-container a {
-    margin-right: 10px;
-    padding: 0 1rem;
     cursor: pointer;
     color: #fff;
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: 10px;
+    margin: 0;
+    align-items: center;
+}
+
+.navbar-items-container p {
+    margin: 0;
+    align-items: center;
 }
 
 .navbar-login button {
     background-color: #f05454;
     color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 25px;
+    transition: 100ms ease-in;
+    font-size: 1rem;
+}
+
+.navbar-login button:hover {
+    background-color: #953333;
+    transition: 100ms ease-in;
 }
 
 /* Yeni CSS Kodları (Mobil Uyumlu) */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 1rem;
+        padding: 5px;
     }
 
     .navbar-items {
         justify-content: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
+        gap: 10px;
     }
 
     .navbar-login {
         margin-top: 1rem;
     }
 
-    .navbar-items-logo h2 {
-        font-size: 1.2rem;
+    .navbar-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-items h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
     }
 
     .navbar-items-container {
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        align-items: center;
     }
 
     .navbar-items-container a {
-        margin: 5px;
+        font-size: 0.9rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .navbar-items-logo img{
+        height: 1.75rem;
+    }
+
+    .navbar-login button{
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    .navbar-login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

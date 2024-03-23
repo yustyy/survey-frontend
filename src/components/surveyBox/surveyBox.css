@@ -38,6 +38,11 @@
   transition: 100ms background-color;
 }
 
+.surveys-survey-name{
+    max-width: 450px;
+    word-wrap: break-word;
+}
+
 .survey-view-button button{
     margin: auto;
   align-items: center;

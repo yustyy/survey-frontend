@@ -61,13 +61,14 @@ const SolveSurvey = () => {
   }
 
   return (
-    <body className='point-container-body'>
+    
       <div className="point-container">
         <div className='point-container-logo'>
         <img src="https://i.ibb.co/PtL1n4K/Whats-App-Image-2024-03-16-at-23-16-39-removebg-preview.png" alt="Logo" />
         </div>
       
       <h1 className='point-survey-name'>{survey.surveyName}</h1>
+      <div className='solve-card-container'>
       {survey.questions.map(question => (
         <div key={question.id} className="point-card">
           <div className="point-card-body">
@@ -88,11 +89,13 @@ const SolveSurvey = () => {
           </div>
         </div>
       ))}
+      </div>
+      
       <button className="point-submit-button" onClick={handleSubmit} disabled={isSubmitting}>
-        {isSubmitting ? 'Submitting...' : 'Submit Ratings'}
+        {isSubmitting ? 'Submitting...' : 'Submit Ratingsa'}
       </button>
     </div>
-    </body>
+    
   );
 };
 

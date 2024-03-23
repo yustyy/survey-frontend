@@ -9,7 +9,7 @@
     justify-content: flex-start;
     margin: 1rem;
     gap: 30px;
-    
+    border: 1px solid var(--palette_main);
 }
 
 .survey-buttons {

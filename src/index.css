@@ -3,6 +3,12 @@
 body{
     font-family: "Poppins", sans-serif;
     background-color: var(--background_color);
+    height: 100vh; /* Set height to 100% of viewport height */
+  overflow-y: auto; /* Add scrollbar when content overflows */
+}
+
+body.point-container-body{
+    background-color: var(--login_background);
 }
 
 :root{

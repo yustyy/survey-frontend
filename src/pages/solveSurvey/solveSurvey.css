@@ -1,6 +1,4 @@
-  body.point-container-body {
-  background-color: var(--login_background) !important;
-  }
+
   
   /* Container */
   .point-container {
@@ -9,6 +7,7 @@
     width: 100%;
     margin: 0 auto;
     gap: 20px;
+    background-color: var(--login_background) !important;
   }
 
   .point-container-logo{

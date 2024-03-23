@@ -61,7 +61,7 @@ const SolveSurvey = () => {
   }
 
   return (
-    <body className='point-container-body'>
+    
       <div className="point-container">
         <div className='point-container-logo'>
         <img src="https://i.ibb.co/PtL1n4K/Whats-App-Image-2024-03-16-at-23-16-39-removebg-preview.png" alt="Logo" />
@@ -92,7 +92,7 @@ const SolveSurvey = () => {
         {isSubmitting ? 'Submitting...' : 'Submit Ratings'}
       </button>
     </div>
-    </body>
+    
   );
 };
 

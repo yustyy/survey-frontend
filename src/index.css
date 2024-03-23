@@ -3,7 +3,7 @@
 body{
     font-family: "Poppins", sans-serif;
     background-color: var(--background_color);
-    height: 100vh; /* Set height to 100% of viewport height */
+    
 }
 
 body.point-container-body{

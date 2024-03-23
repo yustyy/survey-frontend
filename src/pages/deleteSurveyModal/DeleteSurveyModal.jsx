@@ -28,17 +28,17 @@ const DeleteSurveyModal = ({survey, handleCloseDeleteSurveyModal}) => {
       <p>Soru sayısı {survey.questions.length} </p>
       <p>Bu işlem geri alınamaz!</p>
       <form>
-        <div className="buttons">
+        <div className="delete-survey-buttons">
           <button
             type="submit"
-            className="button-cancel"
+            className="delete-survey-button-cancel"
             onClick={handleCloseDeleteSurveyModal}
           >
             İptal et
           </button>
           <button
             type="button"
-            className="button-submit"
+            className="survey-button-submit"
             onClick={handleSubmit}
           >
             Anketi Sil

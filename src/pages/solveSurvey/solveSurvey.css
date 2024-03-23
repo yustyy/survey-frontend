@@ -1,53 +1,82 @@
-/* SurveyApp.css */
-
-/* Body background color */
-body {
-  background-color: #716d6d; /* Your desired background color */
+  body.point-container-body {
+  background-color: var(--login_background) !important;
   }
   
   /* Container */
-  .container {
-    max-width: 800px; /* Adjust max-width as needed */
+  .point-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    gap: 20px;
+  }
+
+  .point-container-logo{
+    width: 100%;
   }
   
   /* Survey header */
   h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    color: var(--background_color);
+    
   }
   
   /* Card container */
-  .card {
+  .point-card {
     margin-bottom: 20px; /* Add margin between cards */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    color: var(--text_black_color);
+    width: 500px;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid var(--palette_main);
+    word-wrap: break-word;
   }
   
   /* Card body */
-  .card-body {
+  .point-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
+    width: 500px;
+    height: 200px;
+    background-color: var(--detail_background);
+    border-radius: 5px;
+    word-wrap: break-word;
   }
   
   /* Question text */
-  .question-text {
-    font-size: 18px;
+  .point-question-text {
+    font-size: 20px;
     margin-bottom: 10px;
     text-align: center;
+    color: var(--text_black_color);
+    word-wrap: break-word;
+    flex-wrap: wrap;
+  }
+
+  .point-question{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    
+    word-wrap: break-word;
   }
 
   
   
   /* Options container */
-  .options-container {
+  .point-options-container {
     display: flex;
     flex-direction: column;
   }
   
   /* Option */
-  .option {
+  .point-option {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 8px;
@@ -55,30 +84,30 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .option:hover {
+  .point-option:hover {
     background-color: #dcd0ff; /* Hover color for options */
   }
   
   /* Option text */
-  .option-text {
+  .point-option-text {
     margin: 0;
     font-size: 16px;
     text-align: center;
   }
   
   /* Selected option */
-  .option.selected {
+  .point-option.selected {
     background-color: #595959; /* Selected color for options */
     color: #fff;
   }
   
   /* Submit button */
-  .submit-button {
+  .point-submit-button {
     display: block;
     margin: 20px auto; /* Center the submit button and add margin */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0084ff7f;
+    background-color: var(--palette_main);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -86,14 +115,14 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .submit-button:hover {
-    background-color: #aa47dc;
+  .point-submit-button:hover {
+    background-color: var(--palette_secondary);
   }
   
   
   /* SurveyApp.css */
   .star {
-    font-size: 30px; /* Increase the font size to make the stars bigger */
+    font-size: 35px; /* Increase the font size to make the stars bigger */
     color: #ccc; /* Default color of the stars */
     cursor: pointer; /* Show pointer cursor when hovering over the stars */
     margin: 0 5px; /* Add margin between stars */
@@ -103,71 +132,79 @@ body {
   color: #f0c419; /* Change the color of selected stars */
 }
 
-.rating-container {
+.point-rating-container {
   display: flex;
   justify-content: center;
   margin-top: 10px; /* Add margin between question text and stars */
 }
 
-.container img {
+.point-container img {
   width: 400px; /* Adjust the width as needed */
-  height: auto;
+  max-height: max-content;
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px; /* Add margin between the image and other content */
 }
 
-.survey-name {
-  font-size: 24px;
+.point-survey-name {
+  font-size: 32px;
   text-align: center;
-  margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+  color: var(--background_color);
 }
 
 
 /* Mobil Uyumlu CSS */
 @media screen and (max-width: 768px) {
-  .container {
-    padding: 10px; /* Küçük ekranlarda daha az dolgulu bir konteyner */
+  .point-container {
+    align-items: center;
+    margin: auto;
+    justify-content: center;
   }
+  
+
   
   h1 {
     font-size: 20px; /* Başlık font boyutunu azalt */
     margin-bottom: 10px; /* Başlık ile diğer içerikler arasındaki boşluğu azalt */
   }
   
-  .card {
-    border-radius: 4px; /* Kartların köşe yuvarlaklığını azalt */
+  .point-card {
+    border-radius: 5px; /* Kartların köşe yuvarlaklığını azalt */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Daha hafif bir gölge */
+    width: 300px;
   }
   
-  .card-body {
-    padding: 15px; /* Kart içeriği için daha az dolgu */
+  .point-card-body {
+    width: 300px;
+    padding: 10px;
+    word-wrap: break-word;
   }
   
-  .question-text {
+  .point-question-text {
     font-size: 16px; /* Soru metni font boyutunu azalt */
     margin-bottom: 8px; /* Soru metni ile yıldızlar arasındaki boşluğu azalt */
+    max-width: 270px;
   }
   
-  .star {
+  .point-question{
+    word-wrap: break-word;
+  }
+
+  .point-star {
     font-size: 24px; /* Yıldız boyutunu artır */
     margin: 0 3px; /* Yıldızlar arasındaki boşluğu azalt */
   }
   
-  .container img {
-    width: 300px; /* Logonun genişliğini azalt */
+  .point-container img {
+    width: 200px; /* Logonun genişliğini azalt */
     margin-bottom: 10px; /* Logo ile diğer içerikler arasındaki boşluğu azalt */
   }
   
-  .survey-name {
+  .point-survey-name {
     font-size: 20px; /* Anket adı font boyutunu azalt */
     margin-bottom: 15px; /* Anket adı ile diğer içerikler arasındaki boşluğu azalt */
   }
   
-  .submit-button {
+  .point-submit-button {
     margin: 15px auto; /* Gönderme düğmesi ile diğer içerikler arasındaki boşluğu ayarla */
     padding: 8px 16px; /* Gönderme düğmesi dolgusunu ayarla */
     font-size: 14px; /* Gönderme düğmesi font boyutunu azalt */

@@ -24,29 +24,52 @@
     margin-bottom: 10px;
   }
   
-  .buttons {
+  .delete-survey-buttons {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+    color: var(--background_color);
+    gap: 20px;
   }
   
-  .button-cancel,
-  .button-submit {
+  .delete-survey-button-cancel{
     padding: 10px 20px;
     margin-right: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: var(--palette_main);
+    transition: 100ms background-color;
+    color: var(--background_color);
+  }
+
+
+  .delete-survey-button-cancel:hover{
+    background-color: var(--palette_secondary);
+  }
+
+
+  .survey-button-submit {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--palette_main);
   }
   
-  .button-cancel {
-    background-color: #ccc;
+  .delete-survey-button-cancel {
+    margin: 0;
   }
   
-  .button-submit {
+  .survey-button-submit {
     background-color: #f44336;
     color: #fff;
+    transition: 100ms background-color;
+    margin: 0;
   }
   
-  .button-submit:hover {
+  .survey-button-submit:hover {
     background-color: #d32f2f;
   }
   

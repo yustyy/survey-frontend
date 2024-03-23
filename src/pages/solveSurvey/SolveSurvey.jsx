@@ -61,15 +61,19 @@ const SolveSurvey = () => {
   }
 
   return (
-    <div className="container">
-      <img src="https://i.ibb.co/PtL1n4K/Whats-App-Image-2024-03-16-at-23-16-39-removebg-preview.png" alt="Logo" />
-      <h1 className='survey-name'>{survey.surveyName}</h1>
+    <body className='point-container-body'>
+      <div className="point-container">
+        <div className='point-container-logo'>
+        <img src="https://i.ibb.co/PtL1n4K/Whats-App-Image-2024-03-16-at-23-16-39-removebg-preview.png" alt="Logo" />
+        </div>
+      
+      <h1 className='point-survey-name'>{survey.surveyName}</h1>
       {survey.questions.map(question => (
-        <div key={question.id} className="card">
-          <div className="card-body">
-            <div className="question">
-              <p className="question-text">{question.content}</p>
-              <div className="rating-container">
+        <div key={question.id} className="point-card">
+          <div className="point-card-body">
+            <div className="point-question">
+              <p className="point-question-text">{question.content}</p>
+              <div className="point-rating-container">
                 {[1, 2, 3, 4, 5].map(starRating => (
                   <span
                     key={starRating}
@@ -84,10 +88,11 @@ const SolveSurvey = () => {
           </div>
         </div>
       ))}
-      <button className="submit-button" onClick={handleSubmit} disabled={isSubmitting}>
+      <button className="point-submit-button" onClick={handleSubmit} disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit Ratings'}
       </button>
     </div>
+    </body>
   );
 };
 

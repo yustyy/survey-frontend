@@ -34,7 +34,9 @@ const Surveys = () => {
 
   return (
     <div className='survey-container'>
-      <button type='button' className='add-new-survey-button' onClick={handleOpenModal}>Yeni Anket ekle</button>
+      <button type='button' className='add-new-survey-button' onClick={handleOpenModal}>
+        Yeni Anket Ekle 
+      </button>
       <div className='surveys'>
         {surveys && surveys.length > 0 ? (
           surveys.map((survey) => <Survey key={survey.id} survey={survey} />)

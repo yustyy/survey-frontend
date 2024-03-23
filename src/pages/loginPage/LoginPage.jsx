@@ -33,8 +33,10 @@ const LoginPage = () => {
       <div className="logo-container">
           <img src={logo} alt="Logo" />
       </div>
-      <h2>Giriş Yap</h2>
-      <form onSubmit={handleLogin}>
+      
+      <form onSubmit={handleLogin} >
+        <div className='form-container'>
+        <h2>Giriş Yap</h2>
         <div>
           <label>Username:</label>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -44,6 +46,7 @@ const LoginPage = () => {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button type="submit">Login</button>
+        </div>
       </form>
     </div>
   );

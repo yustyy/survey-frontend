@@ -35,17 +35,17 @@ const ChangeQuestionModal = ({ closeModal, questionId }) => {
             value={newName}
             onChange={handleChange}
           />
-          <div className="buttons">
+          <div className="change-question-buttons">
             <button
               type="button"
-              className="button-cancel"
+              className="change-question-buttons-button-cancel"
               onClick={closeModal}
             >
               İptal et
             </button>
             <button
               type="submit"
-              className="button-submit"
+              className="change-question-buttons-button-submit"
               onClick={handleSubmit}
             >
               Kaydet

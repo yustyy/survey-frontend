@@ -31,17 +31,17 @@ const AddQuestionModal = ({ closeModal, surveyId} ) => {
           value={question}
           onChange={handleChange}
         />
-        <div className="buttons">
+        <div className="addq-buttons">
           <button
             type="button"
-            className="button-cancel"
+            className="addq-button-cancel"
             onClick={closeModal}
           >
             İptal et
           </button>
           <button
             type="submit"
-            className="button-submit"
+            className="addq-button-submit"
             onClick={handleSubmit}
           >
             Soru Ekle

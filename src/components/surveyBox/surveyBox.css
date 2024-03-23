@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(0deg,#1da8b7a5,#2a719d69);
+    background-color: var(--detail_background);
     border-radius: 20px;
-    padding: 0.5rem 3rem;
+    padding: 3rem 3rem;
     overflow: hidden;
     justify-content: flex-start;
     margin: 1rem;
-    
+    gap: 30px;
+    border: 1px solid var(--palette_main);
 }
 
 .survey-buttons {
@@ -16,52 +17,83 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
+    gap: 30px;
 }
-
-.survey-name h3 {
-    background-color: #3faed9;
-}
-
-
-
-
 
 .survey-get-link-button button {
-    background-color: #3faed9;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 14px;;
-    cursor: pointer;
-    outline: none;
-    border: none;
+    margin: auto;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Anket ekleme butonunun alt boşluğu */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--palette_main);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--background_color);
+  transition: 100ms background-color;
+}
+
+.surveys-survey-name{
+    max-width: 450px;
+    word-wrap: break-word;
 }
 
 .survey-view-button button{
-    background-color: #3faed9;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 14px;;
-    cursor: pointer;
-    outline: none;
-    border: none;
+    margin: auto;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Anket ekleme butonunun alt boşluğu */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--palette_main);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--background_color);
+  transition: 100ms background-color;
 }
 
+.survey-view-button button:hover{
+    background-color: var(--palette_secondary);
+}
+
+.survey-get-link-button button:hover{
+    background-color: var(--palette_secondary);
+}
 
 .survey-delete-button button{
-     background-color: #ff0000da;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 14px;;
-    cursor: pointer;
-    outline: none;
+    margin: auto;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Anket ekleme butonunun alt boşluğu */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f05454;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--background_color);
+    transition: 100ms background-color;
 }
 
 .survey-delete-button button:hover{
-    background-color: #ff0000;
+    background-color: #953333;
 }
 
+.survey-comp-container{
+    display: flex;
+    flex-direction: column;
+    color: var(--black_text_color);
+    gap: 15px;
+}

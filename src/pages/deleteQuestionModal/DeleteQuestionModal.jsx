@@ -27,17 +27,17 @@ const DeleteQuestionModal = ( {question, closeModal}) => {
       <p>Sorunun cevaplanma sayısı: {question.ratings.length}</p>
       <p>Bu işlem geri alınamaz!</p>
       <form>
-        <div className="buttons">
+        <div className="deleteq-buttons">
           <button
             type="submit"
-            className="button-cancel"
+            className="deleteq-button-cancel"
             onClick={closeModal}
           >
             İptal et
           </button>
           <button
             type="button"
-            className="button-submit"
+            className="deleteq-button-submit"
             onClick={handleSubmit}
           >
             Soruyu Sil

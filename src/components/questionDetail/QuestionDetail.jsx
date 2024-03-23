@@ -47,8 +47,8 @@ const QuestionDetail = ({ question } ) => {
 
 
   return (
-    <div className="question-detail">
-      <div className="question-name">
+    <div className="question-detail-cover">
+      <div className="question-detail-name">
         <h3>{question.content}</h3>
       </div>
       <div className="question-avg-rate">

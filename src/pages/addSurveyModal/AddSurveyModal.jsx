@@ -38,17 +38,17 @@ const AddSurveyModal = ( {closeModal}) => {
             value={surveyName}
             onChange={handleChange}
           />
-          <div className="buttons">
+          <div className="add-survey-buttons">
             <button
               type="button"
-              className="button-cancel"
+              className="add-survey-button-cancel"
               onClick={closeModal}
             >
               İptal et
             </button>
             <button
               type="submit"
-              className="button-submit"
+              className="add-survey-button-submit"
               onClick={handleSubmit}
             >
               Ekle

@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import SolveSurvey from './pages/solveSurvey/SolveSurvey'
 import { useLocation } from 'react-router-dom'
 import LoginPage from './pages/loginPage/LoginPage'
+import EndSurveyPage from './pages/endSurveyPage/endSurvey'
+import EndSurvey from './pages/endSurveyPage/endSurvey'
 
 const App = () => {
 
@@ -14,11 +16,13 @@ const App = () => {
   const location = useLocation();
 
   const renderNavbar = () => {
-    if (location.pathname.startsWith('/solveSurvey/') || location.pathname.startsWith('/login')) {
+    if (location.pathname.startsWith('/solveSurvey/') || location.pathname.startsWith('/login') || location.pathname.startsWith('/endSurvey')) {
       return null;
     }
     return <Navbar />;
   }
+
+  
 
 
 
@@ -32,6 +36,7 @@ const App = () => {
           <Route path="/surveys/:surveyLink" element={token ? <SurveyDetails /> : <Navigate to="/login" />} />
           <Route path="/solveSurvey/:surveyLink" element={<SolveSurvey />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/endSurvey" element={<EndSurvey />} />
         </Routes>
       </div>
   );

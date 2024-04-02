@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './solveSurvey.css'; // Import CSS file
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import SurveryService from '../../services/SurveyService';
 import RatingService from '../../services/RatingService';
 
@@ -49,6 +49,8 @@ const SolveSurvey = () => {
       console.log('Ratings submitted successfully:', ratingsData);
       // Reset ratings to 0 after submission
       setRatings(Object.fromEntries(Object.keys(ratings).map(questionId => [questionId, 0])));
+      // Redirect to the end survey page
+      Navigate('/endSurvey');
     } catch (error) {
       console.error('Error submitting ratings:', error);
     } finally {

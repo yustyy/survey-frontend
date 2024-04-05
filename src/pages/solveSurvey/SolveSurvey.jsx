@@ -9,6 +9,7 @@ const SolveSurvey = () => {
   const [survey, setSurvey] = useState(null);
   const [ratings, setRatings] = useState({}); // Store ratings for each question
   const [isSubmitting, setIsSubmitting] = useState(false); // Flag for submitting state
+  const navigate = useNavigate();
 
   let surveyService = new SurveryService();
   let ratingService = new RatingService();
@@ -50,7 +51,7 @@ const SolveSurvey = () => {
       // Reset ratings to 0 after submission
       setRatings(Object.fromEntries(Object.keys(ratings).map(questionId => [questionId, 0])));
       // Redirect to the end survey page
-      Navigate('/endSurvey');
+      navigate('/endSurvey');
     } catch (error) {
       console.error('Error submitting ratings:', error);
     } finally {

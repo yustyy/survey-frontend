@@ -1,19 +1,29 @@
 import axios from 'axios';  
 
+const axiosInstance = axios.create({
+    baseURL: 'https://devrim-backend.onrender.com/api/ratings/',
+    withCredentials: true,
+  });
+
 export default class RatingService {
 
-    APILink = "https://devrim-backend.onrender.com/api/ratings/";
+    static getHeaders() {
+        const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+        return {
+            Authorization: `Bearer ${token}` // Token'i Authorization başlığı altında gönder
+        };
+    }
 
     getAverageRatingByQuestionId(questionId){
-        return axios.get(this.APILink+"getAverageRatingByQuestionId?questionId="+questionId)
+        return axiosInstance.get("getAverageRatingByQuestionId?questionId="+questionId, { headers: RatingService.getHeaders() })
     }
 
     addRatingList(ratings){
-        return axios.post(this.APILink+"addRatingList",ratings)
+        return axiosInstance.post("addRatingList",ratings)
     }
 
     getRatingsByQuestionId(questionId){
-        return axios.get(this.APILink+"getRatingsByQuestionId?questionId="+questionId)
+        return axiosInstance.get("getRatingsByQuestionId?questionId="+questionId, { headers: RatingService.getHeaders() })
     }
 
 

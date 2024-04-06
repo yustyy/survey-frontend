@@ -1,30 +1,45 @@
 import axios from 'axios';  
 
+const axiosInstance = axios.create({
+    baseURL: 'https://devrim-backend.onrender.com/api/surveys/',
+    withCredentials: true,
+  });
+
 export default class SurveyService {
 
-    APILink = "https://devrim-backend.onrender.com/api/surveys/"
+    static getHeaders() {
+        const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+        return {
+            Authorization: `Bearer ${token}` // Token'i Authorization başlığı altında gönder
+        };
+    }
+    
 
     getSurveys(){
-        return axios.get(this.APILink+"getAllSurveys")
+        return axiosInstance.get("getAllSurveys", { headers: SurveyService.getHeaders() })
     }
 
     getSurveyBySurveyLink(surveyLink){
-        return axios.get(this.APILink+"getSurveyByLink?surveyLink="+surveyLink)
+        return axiosInstance.get("getSurveyByLink?surveyLink="+surveyLink , { headers: SurveyService.getHeaders() })    
     }
 
     changeSurveyName(surveyId, newName){
-        return axios.post(this.APILink+"changeSurveyName?surveyId="+surveyId+"&newName="+newName)
+        return axiosInstance.post("changeSurveyName?surveyId="+surveyId+"&newName="+newName, {}, { headers: SurveyService.getHeaders() })
     }
 
     addSurvey(surveyName){
-        return axios.post(this.APILink+"add", {name:surveyName})
+        return axiosInstance.post("add", {name:surveyName}, { headers: SurveyService.getHeaders() })
     }
 
     deleteSurvey(surveyId){
-        return axios.post(this.APILink+"delete?id="+surveyId)
+        return axiosInstance.delete("delete?id="+surveyId, { headers: SurveyService.getHeaders() })
     }
 
     getSurveyQuestionsByLink(surveyLink){
-        return axios.get(this.APILink+"getSurveyQuestionsByLink?surveyLink="+surveyLink)
+        return axiosInstance.get("getSurveyQuestionsByLink?surveyLink="+surveyLink)
+    }
+    
+    checkIfUserSubmittedSurveyBefore(surveyLink){
+        return axiosInstance.get("checkIfUserSubmittedSurveyBefore?surveyLink="+surveyLink)
     }
 }

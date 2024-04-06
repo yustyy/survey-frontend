@@ -15,8 +15,22 @@ const SolveSurvey = () => {
   let ratingService = new RatingService();
 
   useEffect(() => {
-    fetchSurvey();
+    checkUserSubmission();
   }, [surveyLink]);
+
+  const checkUserSubmission = async () => {
+    try {
+     const response = await surveyService.checkIfUserSubmittedSurveyBefore(surveyLink);
+      
+      if (response.data.success) {
+        navigate('/endSurvey');
+      } else {
+        fetchSurvey();
+      }
+    } catch (error) {
+      console.error('Error checking user submission:', error);
+    }
+  };
 
   const fetchSurvey = async () => {
     try {

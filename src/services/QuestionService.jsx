@@ -1,19 +1,30 @@
 import axios from 'axios';  
 
-export default class RatingService {
+const axiosInstance = axios.create({
+    baseURL: 'https://devrim-backend.onrender.com/api/questions/',
+    withCredentials: true,
+  });
 
-    APILink = "https://devrim-backend.onrender.com/api/questions/";
+export default class QuestionService {
+
+    static getHeaders() {
+        const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+        return {
+            Authorization: `Bearer ${token}` // Token'i Authorization başlığı altında gönder
+        };
+    }
+
 
     addQuestion(surveyId, question){
-        return axios.post(this.APILink+"add", {surveyId:surveyId, content:question})
+        return axiosInstance.post("add", {surveyId:surveyId, content:question}, { headers: QuestionService.getHeaders() })    
     }
 
     deleteQuestion(questionId){
-        return axios.post(this.APILink+"delete?id="+questionId)
+        return axiosInstance.delete("delete?id="+questionId, { headers: QuestionService.getHeaders() })
     }
 
     changeQuestion(questionId, newContent){
-        return axios.post(this.APILink+"changeQuestionName?questionId="+questionId+"&newName="+newContent)
+        return axiosInstance.post("changeQuestionName?questionId="+questionId+"&newName="+newContent, { headers: QuestionService.getHeaders() } )
     }
 
 }

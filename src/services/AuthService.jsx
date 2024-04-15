@@ -16,7 +16,7 @@ export default class AuthService {
 
 
     generateToken(username, password){
-        return axiosInstance.get("generateToken?username="+username+"&password="+password)
+        return axiosInstance.post("generateToken?username="+username+"&password="+password)
     }
 
 

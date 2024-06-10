@@ -1,7 +1,7 @@
 import axios from 'axios';  
 
 const axiosInstance = axios.create({
-    baseURL: 'https://backend.devrimanket/api/questions/',
+    baseURL: 'https://backend.devrimanket.com/api/questions/',
     withCredentials: true,
   });
 

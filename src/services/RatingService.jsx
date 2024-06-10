@@ -1,7 +1,7 @@
 import axios from 'axios';  
 
 const axiosInstance = axios.create({
-    baseURL: 'https://backend.yusufacmaci.com/api/ratings/',
+    baseURL: 'https://backend.devrimanket.com/api/ratings/',
     withCredentials: true,
   });
 
